@@ -35,7 +35,7 @@ const Navbar = () => {
         <FaCartPlus></FaCartPlus>
         <button>Login</button>
     </div>
-    <button class="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full">Get Started</button>
+    <button className="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full">Get Started</button>
   </div>
 </div>
     );
