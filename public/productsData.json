@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Resume Builder Pro",
+    "description": "Create professional resumes with modern templates and ATS-friendly formats.",
+    "price": 19,
+    "period": "mo",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF"
+    ],
+    "icon": "https://i.ibb.co.com/7x2Np0zF/portfolio.png"
+  },
+  {
+    "id": 2,
+    "name": "Portfolio Website Kit",
+    "description": "Build your personal portfolio website quickly with ready-made components.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": [
+      "Responsive design",
+      "Dark mode",
+      "Easy customization"
+    ],
+    "icon": "https://i.ibb.co.com/p6sLrkCY/candidate.png" 
+  },
+  {
+    "id": 3,
+    "name": "Job Tracker",
+    "description": "Track your job applications and manage interviews in one place.",
+    "price": 9,
+    "period": "mo",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Application tracking",
+      "Interview reminders",
+      "Status updates"
+    ],
+    "icon": "https://i.ibb.co.com/gFHRTXVp/operation.png"
+  },
+  {
+    "id": 4,
+    "name": "LinkedIn Booster",
+    "description": "Optimize your LinkedIn profile to attract recruiters.",
+    "price": 29,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Profile analysis",
+      "Keyword suggestions",
+      "Headline generator"
+    ],
+    "icon": "https://i.ibb.co.com/9ktWz02y/linkedin.png"
+  },
+  {
+    "id": 5,
+    "name": "Cover Letter Generator",
+    "description": "Generate personalized cover letters in seconds.",
+    "price": 5,
+    "period": "mo",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "AI-generated content",
+      "Multiple formats",
+      "Download as PDF"
+    ],
+    "icon": "https://i.ibb.co.com/fGKT0C9s/legal.png"
+  },
+  {
+    "id": 6,
+    "name": "Interview Prep Kit",
+    "description": "Prepare for interviews with common questions and smart answers.",
+    "price": 15,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": [
+      "Mock interviews",
+      "Question bank",
+      "Tips & tricks"
+    ],
+    "icon": "https://i.ibb.co.com/bjzcf7C2/interview.png"
+  },
+  {
+    "id": 7,
+    "name": "Freelancer Toolkit",
+    "description": "All-in-one toolkit for freelancers to manage clients and projects.",
+    "price": 12,
+    "period": "mo",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Invoice generator",
+      "Client management",
+      "Project tracking"
+    ],
+    "icon": "https://i.ibb.co.com/nsVfVbbf/social-media.png"
+  },
+  {
+    "id": 8,
+    "name": "Skill Assessment Tests",
+    "description": "Test and showcase your skills with certified assessments.",
+    "price": 25,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": [
+      "Skill quizzes",
+      "Certificates",
+      "Performance reports"
+    ],
+    "icon": "https://i.ibb.co.com/HL0T2JJV/writing-2327400-1.png"
+  }
+]
