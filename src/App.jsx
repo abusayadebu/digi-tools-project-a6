@@ -5,7 +5,6 @@ import Navbar from './components/Navbar'
 import PremiumTools from './components/PremiumTools'
 import Products from './components/Products'
 import Stat from './components/Stat'
-import Product from './components/Product'
 import CartSection from './components/CartSection'
 import EmptyCart from './components/EmptyCart'
 
@@ -32,6 +31,7 @@ function App() {
   
   // add to cart state
   let [cart, setCart] = useState([]);
+  let [total, setTotal] = useState(0)
 
   // cart function
   const addToCart = (product) => {
@@ -39,7 +39,9 @@ function App() {
     const isExist = cart.find(item => item.id === product.id)
     if(!isExist){
     setCart([...cart, product]);
-    console.log(cart);
+    
+    // total price add
+    setTotal(prev=> prev + product.price)
     alert("cart added")
     }
     else{
@@ -51,7 +53,16 @@ function App() {
   const removeCartFunction = (id) => {
       const updateCart = cart.filter(item => item.id !== id)
       setCart(updateCart)
+      
+      // removed product find for price
+      const removedProduct = cart.find(item => item.id === id)
+
+      // minus
+      setTotal(prev=> prev - removedProduct.price)
+
   }
+
+
 
   return (
     <>
@@ -73,7 +84,7 @@ function App() {
             </Products>
           ) : (
             cart.length === 0 ? <EmptyCart></EmptyCart> :
-            <CartSection cart={cart} removeCartFunction={removeCartFunction}></CartSection>
+            <CartSection total={total}  cart={cart} removeCartFunction={removeCartFunction}></CartSection>
           )
       }
       </Suspense>
