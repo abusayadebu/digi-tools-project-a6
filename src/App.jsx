@@ -7,6 +7,7 @@ import Products from './components/Products'
 import Stat from './components/Stat'
 import CartSection from './components/CartSection'
 import EmptyCart from './components/EmptyCart'
+import { toast, ToastContainer } from 'react-toastify'
 
 
 
@@ -23,6 +24,7 @@ function App() {
     // toggle buttons
     const handleProducts = () => {
           setActiveBtn(true)
+          // checkout stop
           setCheckout(false)
     }
     const handleCart = () => {
@@ -47,10 +49,12 @@ function App() {
     
     // total price add
     setTotal(prev=> prev + product.price)
-    alert("cart added")
+    toast.success("product added to the cart")
     }
     else{
-      alert("already added")
+      toast.warning("sorry, product already added",{
+        position: "top-left",
+      });
     }
   }
 
@@ -58,6 +62,9 @@ function App() {
   const removeCartFunction = (id) => {
       const updateCart = cart.filter(item => item.id !== id)
       setCart(updateCart)
+      toast.warning("Cart Deleted",{
+        position: "top-left",
+      });
 
       // removed product find for price
       const removedProduct = cart.find(item => item.id === id)
@@ -70,6 +77,11 @@ function App() {
   // checkout function
   const checkOutHandler = () =>{
     setCheckout(true)
+    toast.success("Checkout Success, Thanks",{
+        position: "top-center",
+      });
+    
+    // clear cart ans total
     setCart([])
     setTotal(0);
   }
@@ -100,6 +112,9 @@ function App() {
           )
       }
       </Suspense>
+
+      {/* toast container */}
+      <ToastContainer></ToastContainer>
     </>
   )
 }
