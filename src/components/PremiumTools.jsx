@@ -12,17 +12,19 @@ const PremiumTools = ({activeBtn, cart, handleProducts, handleCart, isCheckout})
             Choose from our curated collection of premium digital products designed to boost your productivity and creativity.
           </p>
 
-          {/* buttons */}
-          <button onClick={handleProducts} className={`btn rounded-full mr-5 
+          <div className='shadow-xs max-w-[220px] p-2 rounded-full mx-auto'>
+            {/* buttons */}
+          <button onClick={handleProducts} className={`btn rounded-full mr-2
             ${
                 activeBtn ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white" : ""
             }
             `}>Products</button>
 
-            <button onClick={handleCart} className={`btn rounded-full 
+            <button onClick={handleCart} className={`btn rounded-full
             ${!activeBtn ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white" : ""
                     }
             `}>Cart ({isCheckout ? 0 : cart.length})</button>
+          </div>
             </div>
         </section>
     );

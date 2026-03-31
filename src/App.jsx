@@ -126,6 +126,7 @@ function App() {
       {
           activeBtn ? (
             <Products 
+              cart={cart}
               addToCart={addToCart} 
               productPromise={productPromise}>
             </Products>
