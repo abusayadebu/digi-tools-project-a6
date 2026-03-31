@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cart = ({item}) => {
+const Cart = ({item, removeCartFunction}) => {
     return (
         <div className=''>
         {/* cart */}
@@ -17,7 +17,7 @@ const Cart = ({item}) => {
         </div>
         </div>
 
-        <button className="text-md text-red-400 font-bold cursor-pointer hover:text-red-500">Remove</button>
+        <button onClick={()=> removeCartFunction(item.id)} className="text-md text-red-400 font-bold cursor-pointer hover:text-red-500">Remove</button>
       </div>
 
         </div>

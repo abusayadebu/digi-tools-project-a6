@@ -47,6 +47,12 @@ function App() {
     }
   }
 
+  // remove cart function
+  const removeCartFunction = (id) => {
+      const updateCart = cart.filter(item => item.id !== id)
+      setCart(updateCart)
+  }
+
   return (
     <>
       <Navbar cart={cart}></Navbar>
@@ -67,7 +73,7 @@ function App() {
             </Products>
           ) : (
             cart.length === 0 ? <EmptyCart></EmptyCart> :
-            <CartSection cart={cart}></CartSection>
+            <CartSection cart={cart} removeCartFunction={removeCartFunction}></CartSection>
           )
       }
       </Suspense>
@@ -75,18 +81,4 @@ function App() {
   )
 }
 
-export default App
-
-
-
-
-/*  const addToCart = (product)=>{
-
-const exist = cart.find(item=>item.id === product.id);
-
-if(!exist){
-setCart([...cart,product]);
-}
-
-}
-*/
+export default App;
