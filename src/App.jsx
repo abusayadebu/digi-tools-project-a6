@@ -7,6 +7,7 @@ import Products from './components/Products'
 import Stat from './components/Stat'
 import Product from './components/Product'
 import CartSection from './components/CartSection'
+import EmptyCart from './components/EmptyCart'
 
 
 
@@ -48,7 +49,7 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar cart={cart}></Navbar>
       {/* banner */}
       <Banner></Banner>
       {/* stat section */}
@@ -65,6 +66,7 @@ function App() {
               productPromise={productPromise}>
             </Products>
           ) : (
+            cart.length === 0 ? <EmptyCart></EmptyCart> :
             <CartSection cart={cart}></CartSection>
           )
       }

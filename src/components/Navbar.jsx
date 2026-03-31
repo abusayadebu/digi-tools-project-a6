@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCartPlus } from 'react-icons/fa';
 
-const Navbar = () => {
+const Navbar = ({cart}) => {
     return (
         <div className="navbar container mx-auto bg-base-100 shadow-sm">
   <div className="navbar-start">
@@ -31,10 +31,15 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end gap-5">
-    <div className='flex gap-3 font-semibold items-center'>
-        <FaCartPlus></FaCartPlus>
-        <button>Login</button>
-    </div>
+    {/* cart icon with badge */}
+  <div className='relative'>
+    <FaCartPlus className='text-2xl'></FaCartPlus>
+
+    {/* badge */}
+    <span className='absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs px-1.5 py-0.5 rounded-full'>
+      {cart.length}
+    </span>
+  </div>
     <button className="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full">Get Started</button>
   </div>
 </div>

@@ -20,8 +20,6 @@ const Cart = ({item}) => {
         <button className="text-md text-red-400 font-bold cursor-pointer hover:text-red-500">Remove</button>
       </div>
 
-
-      
         </div>
     );
 };
