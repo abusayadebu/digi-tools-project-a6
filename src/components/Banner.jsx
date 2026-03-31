@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImg from "../assets/banner.png"
+// import bannerImg from "../assets/banner.png"
 import { FaPlay } from 'react-icons/fa';
 
 const Banner = () => {
@@ -41,7 +41,7 @@ const Banner = () => {
         {/* right side*/}
         <div className="relative">
           <img
-            src={bannerImg}
+            src="/assets/banner.png"
             alt="banner"
             className="w-full rounded-lg object-cover"/>
         </div>

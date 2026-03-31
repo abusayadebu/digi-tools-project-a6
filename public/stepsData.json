@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Create Account",
+    "description": "Sign up for free in seconds. No credit card required to get started.",
+    "icon": "/assets/user.png",
+    "badge": "01"
+  },
+  {
+    "id": 2,
+    "title": "Verify Email",
+    "description": "Confirm your email address to activate your account quickly.",
+    "icon": "/assets/package.png",
+    "badge": "02"
+  },
+  {
+    "id": 3,
+    "title": "Start Using App",
+    "description": "Enjoy all features immediately after your account is ready.",
+    "icon": "/assets/rocket.png",
+    "badge": "03"
+  }
+]

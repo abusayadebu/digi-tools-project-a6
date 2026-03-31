@@ -8,15 +8,26 @@ import Stat from './components/Stat'
 import CartSection from './components/CartSection'
 import EmptyCart from './components/EmptyCart'
 import { toast, ToastContainer } from 'react-toastify'
+import GetStarted from './GetStarted'
 
 
-
+// fetch products
  const fetchProducts = async () => {
   const res = await fetch("/productsData.json")
   return res.json();
  }
+// fetch steps data
+const fetchStepsData = async ()=>{
+    const res = await fetch("/stepsData.json")
+    return res.json();
+}
 
  const productPromise = fetchProducts();
+
+//  step promise
+const stepsPromise = fetchStepsData();
+
+
 
 function App() {
   
@@ -99,7 +110,7 @@ function App() {
       <PremiumTools activeBtn={activeBtn} handleProducts={handleProducts} handleCart={handleCart} cart={cart} isCheckout={isCheckout}></PremiumTools>
 
       {/* products section */}
-      <Suspense fallback={<p>Loading....</p>}>
+      <Suspense fallback={<span className="loading loading-spinner text-primary"></span>}>
       {
           activeBtn ? (
             <Products 
@@ -113,6 +124,11 @@ function App() {
       }
       </Suspense>
 
+      <Suspense fallback={<span className="loading loading-spinner text-primary"></span>}>
+        {/* get started section */}
+      <GetStarted stepsPromise={stepsPromise}></GetStarted>
+      </Suspense>
+      
       {/* toast container */}
       <ToastContainer></ToastContainer>
     </>
