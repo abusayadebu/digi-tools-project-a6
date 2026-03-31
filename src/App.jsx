@@ -23,15 +23,20 @@ function App() {
     // toggle buttons
     const handleProducts = () => {
           setActiveBtn(true)
+          setCheckout(false)
     }
     const handleCart = () => {
           setActiveBtn(false)
+          
     }
 
   
   // add to cart state
   let [cart, setCart] = useState([]);
-  let [total, setTotal] = useState(0)
+  // total state
+  let [total, setTotal] = useState(0);
+  // checkout state
+  const [isCheckout, setCheckout] = useState(false)
 
   // cart function
   const addToCart = (product) => {
@@ -53,13 +58,20 @@ function App() {
   const removeCartFunction = (id) => {
       const updateCart = cart.filter(item => item.id !== id)
       setCart(updateCart)
-      
+
       // removed product find for price
       const removedProduct = cart.find(item => item.id === id)
 
       // minus
       setTotal(prev=> prev - removedProduct.price)
 
+  }
+
+  // checkout function
+  const checkOutHandler = () =>{
+    setCheckout(true)
+    setCart([])
+    setTotal(0);
   }
 
 
@@ -72,7 +84,7 @@ function App() {
       {/* stat section */}
       <Stat></Stat>
       {/* premium sools section */}
-      <PremiumTools activeBtn={activeBtn} handleProducts={handleProducts} handleCart={handleCart} cart={cart}></PremiumTools>
+      <PremiumTools activeBtn={activeBtn} handleProducts={handleProducts} handleCart={handleCart} cart={cart} isCheckout={isCheckout}></PremiumTools>
 
       {/* products section */}
       <Suspense fallback={<p>Loading....</p>}>
@@ -83,8 +95,8 @@ function App() {
               productPromise={productPromise}>
             </Products>
           ) : (
-            cart.length === 0 ? <EmptyCart></EmptyCart> :
-            <CartSection total={total}  cart={cart} removeCartFunction={removeCartFunction}></CartSection>
+            isCheckout || cart.length === 0 ? <EmptyCart></EmptyCart> :
+            <CartSection checkOutHandler={checkOutHandler} isCheckout={isCheckout} total={total}  cart={cart} removeCartFunction={removeCartFunction}></CartSection>
           )
       }
       </Suspense>

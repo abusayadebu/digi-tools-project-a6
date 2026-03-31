@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PremiumTools = ({activeBtn, cart, handleProducts, handleCart}) => {
+const PremiumTools = ({activeBtn, cart, handleProducts, handleCart, isCheckout}) => {
 
     return (
         <section className='container mx-auto mt-28 mb-10'>
@@ -22,7 +22,7 @@ const PremiumTools = ({activeBtn, cart, handleProducts, handleCart}) => {
             <button onClick={handleCart} className={`btn rounded-full 
             ${!activeBtn ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white" : ""
                     }
-            `}>Cart ({cart.length})</button>
+            `}>Cart ({isCheckout ? 0 : cart.length})</button>
             </div>
         </section>
     );
