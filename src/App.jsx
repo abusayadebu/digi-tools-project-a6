@@ -10,6 +10,7 @@ import EmptyCart from './components/EmptyCart'
 import { toast, ToastContainer } from 'react-toastify'
 import GetStarted from './GetStarted'
 import PriceSection from './components/PriceSection'
+import Footer from './components/Footer'
 
 
 // fetch products
@@ -143,6 +144,9 @@ function App() {
       <Suspense fallback={<span className="loading loading-spinner text-primary"></span>}>
         <PriceSection pricePromise={pricePromise}></PriceSection>
       </Suspense>
+
+      {/* footer section */}
+      <Footer></Footer>
       
       {/* toast container */}
       <ToastContainer></ToastContainer>
