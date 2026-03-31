@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
 
-const Product = ({product}) => {
+const Product = ({product, addToCart}) => {
         // Distructure
         const {name, description, price, period, tag, features, icon} = product;
 
@@ -52,7 +52,7 @@ const Product = ({product}) => {
       </ul> */}
     {/* button */}
     <div className="mt-6">
-      <button className="btn btn-block bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white text-lg rounded-full mr-5">Buy Now</button>
+      <button onClick={()=> addToCart(product)} className="btn btn-block bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white text-lg rounded-full mr-5">Buy Now</button>
     </div>
   </div>
 </div>
