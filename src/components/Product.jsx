@@ -45,11 +45,6 @@ const Product = ({product, addToCart}) => {
       
     </ul>
 
-    {/* <ul>
-        {features.map((feature, index) => (
-          <li key={index}>{feature}</li>
-        ))}
-      </ul> */}
     {/* button */}
     <div className="mt-6">
       <button onClick={()=> addToCart(product)} className="btn btn-block bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white text-lg rounded-full mr-5">Buy Now</button>
