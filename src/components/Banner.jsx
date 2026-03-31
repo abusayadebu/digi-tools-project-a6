@@ -11,11 +11,7 @@ const Banner = () => {
         <div>
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-1 rounded-full text-sm mb-6">
-            <span className="w-4 h-4 bg-purple-500 rounded-full">
-                <span className="w-3 h-3 bg-purple-800 rounded-full">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                </span>
-            </span>
+            <img src="/assets/group-5.png" alt="" />
             New: AI-Powered Tools Available
           </div>
 

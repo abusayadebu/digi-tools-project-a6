@@ -4,7 +4,7 @@ import { TiSocialFacebook, TiSocialInstagram } from 'react-icons/ti';
 
 const Footer = () => {
     return (
-        <footer className="container mx-auto mb-12 bg-neutral text-neutral-content px-10 py-10 lg:px-28 lg:py-20">
+        <footer className="container mx-auto bg-neutral text-neutral-content px-10 py-10 lg:px-28 lg:py-20">
         <div className='footer sm:footer-horizontal'>
             <div>
         <a className="cursor-pointer text-3xl font-extrabold text-white">DigiTools</a>
