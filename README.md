@@ -1,16 +1,51 @@
-# React + Vite
+# Prjocet Name: Digi Tools Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive digital tools store built with React. Users can explore products, add them to cart, and manage purchases easily.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Description
 
-## React Compiler
+This project is a single-page web application where users can browse digital tools, view details, and manage a shopping cart. The design follows a clean layout and focuses on smooth user experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js  
+- Tailwind CSS  
+- DaisyUI  
+- JavaScript (ES6+)  
+- React-Toastify  
+- JSON (for product data)  
+
+---
+
+## Features
+
+✔ Browse products with detailed cards (name, price, features, tag)  
+✔ Add products to cart  
+✔ Remove products from cart  
+✔ Cart count updates in navbar  
+✔ Total price calculation in cart  
+✔ Toggle between Products and Cart section  
+✔ Toast notifications for add, remove, and checkout  
+✔ "Added to Cart" button after clicking  
+✔ Checkout clears all cart items  
+✔ Fully responsive design  
+
+---
+
+## UI Sections
+
+- Navbar  
+- Banner  
+- Stats Section  
+- Products Section  
+- Cart Section  
+- Steps Section  
+- Pricing Section  
+- Workflow Section  
+- Footer  
+
+---
