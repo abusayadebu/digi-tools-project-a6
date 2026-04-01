@@ -1,4 +1,4 @@
-# Digi Tools Store
+# Prjocet Name: Digi Tools Store
 
 A modern and responsive digital tools store built with React. Users can explore products, add them to cart, and manage purchases easily.
 

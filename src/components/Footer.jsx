@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className="container mx-auto bg-neutral text-neutral-content px-10 py-10 lg:px-28 lg:py-20">
         <div className='footer sm:footer-horizontal'>
             <div>
-        <a className="cursor-pointer text-3xl font-extrabold text-white">DigiTools</a>
+        <a className="cursor-pointer text-3xl font-extrabold text-white mb-4">DigiTools</a>
         <p className='max-w-sm opacity-70'>Premium digital tools for creators, professionals, and businesses. Work smarter with our suite of powerful tools.</p>
 
         </div>
